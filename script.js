@@ -1,50 +1,55 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. INITIAL SCREEN LOADER MANAGEMENT
-  const loader = document.getElementById("loader");
+  
+  // 1. INSTANT INITIAL SCREEN LOADER OVERHAUL (Optimized for fast dismiss)
+  const loader = document.querySelector(".loader");
   if (loader) {
-    window.addEventListener("load", () => {
-      loader.classList.add("hide");
-    });
-    // Fallback security checkpoint
-    setTimeout(() => {
-      loader.classList.add("hide");
-    }, 1500);
+    // Dismisses loader right after DOM layout finishes initialization
+    loader.classList.add("hide"); 
   }
 
-  // 2. DARK/LIGHT MODE CONFIGURATION INTERFACE
+  // 2. THEME MODE TOGGLE BRIDGE
   const themeToggle = document.getElementById("themeToggle");
   const body = document.body;
 
-  // Retrieve saved theme preference safely
   const savedTheme = localStorage.getItem("theme-mode");
   if (savedTheme === "light") {
     body.classList.add("light-mode");
-    themeToggle.textContent = "☀️";
+    if(themeToggle) themeToggle.textContent = "☀️";
   }
 
-  themeToggle.addEventListener("click", () => {
-    body.classList.toggle("light-mode");
-    if (body.classList.contains("light-mode")) {
-      localStorage.setItem("theme-mode", "light");
-      themeToggle.textContent = "☀️";
-    } else {
-      localStorage.setItem("theme-mode", "dark");
-      themeToggle.textContent = "🌙";
-    }
-  });
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      body.classList.toggle("light-mode");
+      if (body.classList.contains("light-mode")) {
+        localStorage.setItem("theme-mode", "light");
+        themeToggle.textContent = "☀️";
+      } else {
+        localStorage.setItem("theme-mode", "dark");
+        themeToggle.textContent = "🌙";
+      }
+    });
+  }
 
-  // 3. SCROLL REVEAL INTERSECTION OBSERVER PIPELINE
+  // 3. SMOOTH NAVIGATION VIEWPORT SCROLL ACTION
+  window.scrollToSection = function() {
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  // 4. ANIMATION INTERSECTION OBSERVER PIPELINE
   const revealElements = document.querySelectorAll(".reveal");
   const revealOptions = {
-    threshold: 0.12,
-    rootMargin: "0px 0px -40px 0px"
+    threshold: 0.10,
+    rootMargin: "0px 0px -30px 0px"
   };
 
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("active");
-        observer.unobserve(entry.target); // Triggers load memory tracking once
+        observer.unobserve(entry.target); 
       }
     });
   }, revealOptions);
@@ -53,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     revealObserver.observe(element);
   });
 
-  // 4. NAVBAR ACTIVE TRACKING COMPONENT
+  // 5. NAVBAR SCROLL LINK ACTIVE STATE MAPPER
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".nav-links a");
 
@@ -61,7 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentSectionId = "";
     sections.forEach(section => {
       const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
       if (window.scrollY >= sectionTop - 160) {
         currentSectionId = section.getAttribute("id");
       }
@@ -75,25 +79,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 5. CONTACT FORM FORMULATION WITH TRIGGER INTERACTION MODAL
-  const contactForm = document.getElementById("contactForm");
-  const successPopup = document.getElementById("successPopup");
+  // 6. CONTACT INTERACTION SYSTEM WITH POPUP
+  const contactForm = document.querySelector(".contact-form");
+  const successPopup = document.querySelector(".success-popup");
 
   if (contactForm && successPopup) {
     contactForm.addEventListener("submit", (e) => {
       e.preventDefault();
       
-      // Open dialog UI box instantly
       successPopup.classList.add("show");
       contactForm.reset();
 
-      // Automate close structure after view duration metrics pass
       setTimeout(() => {
         successPopup.classList.remove("show");
-      }, 3500);
+      }, 3000);
     });
 
-    // Close on background window bounding click context
     successPopup.addEventListener("click", () => {
       successPopup.classList.remove("show");
     });

@@ -4,16 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Five Rupees Dreams</title>
+
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+  <link rel="icon" type="image/jpeg" href="images/logo.jpeg?v=2">
 </head>
 <body>
-
-  <div class="loader" id="loader">
-    <div class="loader-content">
-      <div class="loader-circle"></div>
-      <h1>LOADING</h1>
-    </div>
-  </div>
 
   <div class="particles">
     <span></span>
@@ -23,108 +22,124 @@
     <span></span>
   </div>
 
+  <div class="loader">
+    <div class="loader-content">
+      <div class="loader-circle"></div>
+      <h1>THE FIVE RUPEES DREAMS</h1>
+    </div>
+  </div>
+
   <nav class="navbar">
     <div class="logo">
-      <img src="images/logo.jpg" alt="Logo">
+      <img src="images/logo.jpeg?v=2" alt="The Five Rupees Dreams Coin Logo" class="logo-image-coin">
       <span class="logo-text">THE FIVE RUPEES DREAMS</span>
     </div>
     <ul class="nav-links">
-      <li><a href="#hero" class="active">Home</a></li>
+      <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#book">The Book</a></li>
-      <li><a href="#timeline">Timeline</a></li>
+      <li><a href="#book">Book</a></li>
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">🌙</button>
+    <div class="theme-toggle" id="themeToggle">🌙</div>
   </nav>
 
-  <section id="hero" class="hero">
+  <section class="hero" id="home">
     <div class="overlay">
       <h1 class="hero-title">THE FIVE RUPEES DREAMS</h1>
       <p class="quote">"Where you begin is not where you are destined to stay."</p>
-      <button class="cta-btn" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Explore Journey</button>
+      <button class="cta-btn" onclick="scrollToSection()">Explore Journey</button>
     </div>
   </section>
 
-  <section id="about" class="about reveal">
+  <section class="about reveal" id="about">
+    <img src="images/author-family.jpeg" alt="Author">
     <div class="about-text">
-      <h2>About The Journey</h2>
-      <p>Every big dream starts with a small step. The Five Rupees Dreams is a testament to perseverance, capturing the essence of shifting timelines from humble beginnings to ultimate success. Through trials and core growth metrics, this story targets inspiration for the younger generation.</p>
+      <h2>About The Author</h2>
+      <p>Fr. Francis Soundararajan is a spiritual care clinician, educator, mentor, and speaker from Tamil Nadu, India. His life journey spans village life, priesthood, education, social outreach, and chaplaincy formation in both India and the United States.</p>
+      <br>
+      <p>His work focuses on spirituality, emotional growth, human connection, and meaningful living beyond divisions of religion and culture.</p>
     </div>
-    <img src="images/about-journey.jpg" alt="About Journey">
   </section>
 
-  <section id="book" class="book reveal">
-    <img src="images/book-mockup.jpg" alt="Book Cover Mockup">
+  <section class="book reveal" id="book">
     <div class="book-text">
-      <h2>The Masterpiece</h2>
-      <p>Diving deep into the narrative of real-world strategy, this release outlines standard methodologies to achieve goals against all structural constraints. It serves as a personal roadmap for anyone striving to change their standard legacy operations.</p>
+      <h2>About The Book</h2>
+      <p>The Five Rupees Dreams is an inspiring journey of hope, spirituality, resilience, and human transformation. The book reflects the emotional and spiritual experiences that shaped Fr. Francis Soundararajan's life.</p>
+      <br>
+      <p>It inspires readers to dream beyond limitations and discover purpose beyond circumstances.</p>
     </div>
+    <img src="images/book-cover.jpeg" alt="Book Cover">
   </section>
 
-  <section id="timeline" class="timeline reveal">
-    <h2>Milestones</h2>
+  <section class="timeline reveal">
+    <h2>Journey</h2>
     <div class="timeline-grid">
       <div class="card">
-        <h3>2024</h3>
-        <p>The core concept blueprint was conceptualized and drafted with target objectives.</p>
+        <h3>Village Life</h3>
+        <br>
+        <p>Humble beginnings that shaped values, compassion, and resilience.</p>
       </div>
       <div class="card">
-        <h3>2025</h3>
-        <p>Execution of initial platform designs and expanding outreach parameters globally.</p>
+        <h3>Priesthood</h3>
+        <br>
+        <p>Dedicated years of spiritual service, mentoring, and guidance.</p>
       </div>
       <div class="card">
-        <h3>2026</h3>
-        <p>Grand launch and structural deployment of full project framework live to the public.</p>
+        <h3>Global Mission</h3>
+        <br>
+        <p>Extending care, hope, and human connection across cultures.</p>
       </div>
     </div>
   </section>
 
-  <section id="gallery" class="gallery reveal">
-    <h2>Moments & Media</h2>
+  <section class="gallery reveal" id="gallery">
+    <h2>Gallery</h2>
     <div class="gallery-grid">
-      <img src="images/gallery1.jpg" alt="Gallery Image 1">
-      <img src="images/gallery2.jpg" alt="Gallery Image 2">
-      <img src="images/gallery3.jpg" alt="Gallery Image 3">
+      <img src="images/book-cover.jpeg" alt="Book Image 1">
+      <img src="images/publisher.jpeg" alt="Book Image 2">
+      <img src="images/author-family.jpeg" alt="Book Image 3">
     </div>
   </section>
 
   <section class="testimonial reveal">
+    <h2>Message</h2>
     <div class="testimonial-box">
-      <p>"An incredible framework of pure motivation. This shifts the complete perspective of managing early career steps into highly integrated goals."</p>
+      <p>“Dreams are not measured by where we start, but by the courage to continue beyond every limitation.”</p>
     </div>
   </section>
 
-  <section id="contact" class="contact reveal">
-    <h2>Connect With Us</h2>
-    <form class="contact-form" id="contactForm">
+  <section class="contact reveal" id="contact">
+    <h2>Contact</h2>
+    <form class="contact-form">
       <input type="text" placeholder="Your Name" required>
       <input type="email" placeholder="Your Email" required>
       <textarea placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
     <div class="contact-info">
-      <p>📧 contact@fiverupeesdreams.com</p>
+      <p>📧 soundarfrancis@gmail.com</p>
+      <p>📞 +91 8825666271</p>
+      <p>📞 +1 (502) 768-7722</p>
     </div>
   </section>
 
   <footer class="footer">
     <h2>THE FIVE RUPEES DREAMS</h2>
-    <p class="footer-quote">"Your potential is limitbound only by your drive."</p>
+    <p class="footer-quote">“Where you begin is not where you are destined to stay.”</p>
     <div class="social-icons">
-      <a href="#">🌐</a>
-      <a href="https://github.com/godwin-02" target="_blank">💻</a>
-      <a href="#">📩</a>
+      <a href="https://www.linkedin.com/in/soundararajan-francis-b00982221/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.instagram.com/francisoundar2024/?__pwa=1" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/@LifeTVThooya" target="_blank"><i class="fab fa-youtube"></i></a>
     </div>
     <div class="footer-line"></div>
-    <p class="copyright">&copy; 2026 The Five Rupees Dreams. All Rights Reserved.</p>
+    <p class="copyright">© 2026 The Five Rupees Dreams. All Rights Reserved.</p>
   </footer>
 
-  <div class="success-popup" id="successPopup">
+  <div class="success-popup">
     <div class="success-box">
-      <h3>Message Sent!</h3>
-      <p>Thank you for reaching out. We will get back to you shortly.</p>
+      <h3>Message Sent Successfully</h3>
+      <p>Thank you for reaching out. We will get back to you soon.</p>
     </div>
   </div>
 
