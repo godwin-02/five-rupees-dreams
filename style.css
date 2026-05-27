@@ -129,7 +129,7 @@ body::before {
   font-family: 'Playfair Display', serif;
 }
 
-/* NAVBAR & LOGO STYLE (INTEGRATED SPECIFIC COIN DESIGN INTERNALLY) */
+/* NAVBAR STRUCTURE WITH CIRCULAR FRAMED COIN GLOW */
 .navbar {
   position: fixed;
   top: 0;
@@ -152,7 +152,7 @@ body::before {
   gap: 14px;
 }
 
-/* Premium circular layout parameters directly assigned to the target logo image asset */
+/* Applies the exact premium coin framing to your navbar logo image */
 .logo img {
   width: 46px;
   height: 46px;
@@ -246,23 +246,28 @@ body.light-mode .nav-links a.active {
 .overlay {
   width: 100%;
   max-width: 1200px;
-  padding: 0 40px;
+  padding: 0 24px;
   margin: 0 auto;
 }
 
+/* ADVANCED MOBILE RESPONSIVE COUNTDOWN TITLE COMPONENT */
 .hero-title {
-  font-size: 74px;
-  line-height: 1.4;          
-  letter-spacing: 3px;       
+  /* Automatically scales smoothly from 34px on small mobile viewports up to 74px on desktops */
+  font-size: clamp(34px, 7vw, 74px); 
+  line-height: 1.2;          
+  letter-spacing: 1px;       
   color: #ffffff !important; 
   font-family: 'Playfair Display', serif;
   margin-top: 10px;
   margin-bottom: 35px;       
   font-weight: 800;
   display: block;
-  min-height: 104px; 
+  word-wrap: break-word;     
+  overflow-wrap: break-word; 
+  min-height: auto;          
 }
 
+/* Blinking cursor for typewriter effect */
 .hero-title::after {
   content: '|';
   color: #f59e0b;
@@ -271,7 +276,7 @@ body.light-mode .nav-links a.active {
 }
 
 .quote {
-  font-size: 22px;
+  font-size: clamp(16px, 2.5vw, 22px);
   line-height: 1.6;
   color: #f1f5f9;
   margin-bottom: 40px;
@@ -297,7 +302,7 @@ button.cta-btn:hover {
   box-shadow: 0 15px 30px rgba(245, 158, 11, 0.5);
 }
 
-/* SECTION STRUCTURES */
+/* CORE SECTIONS */
 section {
   padding: 110px 10%;
 }
@@ -392,7 +397,7 @@ body.light-mode .card h3 {
   color: #1e293b;
 }
 
-/* PORTFOLIO GALLERY */
+/* GALLERY IMAGES */
 .gallery {
   text-align: center;
 }
@@ -425,7 +430,7 @@ body.light-mode .card h3 {
   box-shadow: 0 20px 40px var(--shadow-color);
 }
 
-/* CALLOUT BLOCK */
+/* TESTIMONIAL */
 .testimonial {
   text-align: center;
   background: var(--bg-secondary);
@@ -451,7 +456,7 @@ body.light-mode .card h3 {
   font-style: italic;
 }
 
-/* CONTACT ENGINE PLATFORM */
+/* CONTACT PLATFORM */
 .contact {
   text-align: center;
 }
@@ -530,7 +535,7 @@ textarea {
   font-weight: 500;
 }
 
-/* FOOTER WRAPPER */
+/* FOOTER CONTAINER */
 .footer {
   padding: 75px 24px 45px;
   background: var(--bg-secondary);
@@ -597,7 +602,7 @@ body.light-mode .social-icons a:hover {
   color: var(--text-muted);
 }
 
-/* DIALOG NOTIFICATION LAYERS */
+/* SUCCESS MODAL TRIGGER DIALOG */
 .success-popup {
   position: fixed;
   inset: 0;
@@ -650,7 +655,7 @@ body.light-mode .success-box h3 {
   color: var(--text-main);
 }
 
-/* MOTION ON-SCROLL ANCHORS */
+/* ANIMATION ELEMENT TRANSITIONS */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -662,7 +667,7 @@ body.light-mode .success-box h3 {
   transform: translateY(0);
 }
 
-/* KEYFRAMES RUNTIME CALCULATIONS */
+/* KEYFRAMES MAPPING */
 @keyframes spin {
   100% { transform: rotate(360deg); }
 }
@@ -677,7 +682,7 @@ body.light-mode .success-box h3 {
   50% { color: #f59e0b; }
 }
 
-/* RESPONSIVE LAYOUT MATRIX */
+/* ADAPTIVE LAYOUT VIEWPORTS */
 @media(max-width: 992px) {
   .about, .book {
     flex-direction: column;
@@ -700,12 +705,9 @@ body.light-mode .success-box h3 {
     display: none; 
   }
   .hero-title {
-    font-size: 38px;
-    line-height: 1.4;
-    min-height: 54px;
-  }
-  .quote {
-    font-size: 18px;
+    /* Auto managed dynamically via root clamp token constraints */
+    letter-spacing: 0.5px;
+    margin-bottom: 25px;
   }
   h2 {
     font-size: 30px;
