@@ -664,4 +664,26 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   renderReviewsBoardList();
+
+  // ======================================================================
+  // 🌟 NEW DYNAMIC PREMIUM ENGAGEMENTS
+  // ======================================================================
+  
+  // Speaking Invitation Dynamic Prefill and Scroll Handler
+  const inviteBtn = document.getElementById("inviteCTABtn");
+  const contactMessage = document.getElementById("contactMessageArea");
+  
+  if (inviteBtn && contactMessage) {
+    inviteBtn.addEventListener("click", () => {
+      contactMessage.value = `Dear Francis,\n\nI would love to invite you to speak at our upcoming engagement.\n\nType of Invitation: [Speaking Panel / Retreat / Chaplaincy Talk / School & College / Wellness]\nProposed Date & Time: \nExpected Audience: \nLocation/Venue: \n\nLooking forward to connecting!`;
+      
+      const contactSection = document.getElementById("contact");
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+        setTimeout(() => {
+          contactMessage.focus();
+        }, 800);
+      }
+    });
+  }
 });
