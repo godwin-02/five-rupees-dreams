@@ -3,14 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Five Rupees Dreams</title>
+  <title>The Five Rupees Dreams | Soundararajan Francis</title>
 
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-
   <link rel="icon" type="image/jpeg" href="images/logo.jpeg?v=2">
+
+  <style>
+    #reviewsStreamContainer::-webkit-scrollbar {
+      width: 6px;
+    }
+    #reviewsStreamContainer::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 10px;
+    }
+    #reviewsStreamContainer::-webkit-scrollbar-thumb {
+      background: rgba(212, 175, 55, 0.25);
+      border-radius: 10px;
+    }
+    #reviewsStreamContainer::-webkit-scrollbar-thumb:hover {
+      background: rgba(212, 175, 55, 0.5);
+    }
+    
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0b0f19;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(212, 175, 55, 0.4);
+    }
+  </style>
 </head>
 <body>
 
@@ -36,10 +65,12 @@
     </div>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#book">Book</a></li>
+      <li><a href="#book">About The Book</a></li>
+      <li><a href="#author">About The Author</a></li>
       <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#video">Videos</a></li>
+      <li><a href="#reviews">Public Reviews</a></li>
+      <li><a href="#contact">Private Contact</a></li>
     </ul>
     <div class="theme-toggle" id="themeToggle">🌙</div>
   </nav>
@@ -47,83 +78,271 @@
   <section class="hero" id="home">
     <div class="overlay">
       <h1 class="hero-title">THE FIVE RUPEES DREAMS</h1>
-      <p class="quote">"Where you begin is not where you are destined to stay."</p>
-      <button class="cta-btn" onclick="scrollToSection()">Explore Journey</button>
-    </div>
-  </section>
-
-  <section class="about reveal" id="about">
-    <img src="images/author-family.jpeg" alt="Author">
-    <div class="about-text">
-      <h2>About The Author</h2>
-      <p>Fr. Francis Soundararajan is a spiritual care clinician, educator, mentor, and speaker from Tamil Nadu, India. His life journey spans village life, priesthood, education, social outreach, and chaplaincy formation in both India and the United States.</p>
-      <br>
-      <p>His work focuses on spirituality, emotional growth, human connection, and meaningful living beyond divisions of religion and culture.</p>
+      <p class="tagline">Life Lessons from Poverty to Possibility</p>
+      <p class="quote">A journey from a small village in Tamil Nadu to discovering purpose, spirituality, resilience, and human connection across the world.</p>
+      <p class="author-sub">By Soundararajan Francis</p>
+      <div class="hero-btns">
+        <button class="cta-btn" onclick="document.getElementById('book').scrollIntoView({behavior: 'smooth'})">Buy the Book</button>
+        <button class="cta-btn secondary" onclick="document.getElementById('reviews').scrollIntoView({behavior: 'smooth'})">Write Public Review</button>
+        <button class="cta-btn secondary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Send Private Message</button>
+      </div>
     </div>
   </section>
 
   <section class="book reveal" id="book">
     <div class="book-text">
       <h2>About The Book</h2>
-      <p>The Five Rupees Dreams is an inspiring journey of hope, spirituality, resilience, and human transformation. The book reflects the emotional and spiritual experiences that shaped Fr. Francis Soundararajan's life.</p>
+      <p class="section-lead">The Five Rupees Dreams is an inspirational reflective memoir based on true life experiences.</p>
+      <p>From missing a school picnic because of five rupees… to serving as a chaplain in the United States… this book explores:</p>
+      <ul class="themes-list">
+        <li><i class="fas fa-check-circle"></i> Poverty and resilience</li>
+        <li><i class="fas fa-check-circle"></i> Personal identity and transition</li>
+        <li><i class="fas fa-check-circle"></i> Love and courage</li>
+        <li><i class="fas fa-check-circle"></i> Spirituality beyond religious boundaries</li>
+        <li><i class="fas fa-check-circle"></i> Family, struggle, healing, and hope</li>
+      </ul>
+      <p class="highlight-text">This is not simply a story about success. It is a story about becoming.</p>
       <br>
-      <p>It inspires readers to dream beyond limitations and discover purpose beyond circumstances.</p>
+      <a href="#" class="cta-btn buy-amazon-btn" target="_blank"><i class="fab fa-amazon"></i> Get Your Copy On Amazon</a>
     </div>
     <img src="images/book-cover.jpeg" alt="Book Cover">
   </section>
 
-  <section class="timeline reveal">
-    <h2>Journey</h2>
+  <section class="about reveal" id="author">
+    <img src="images/author.jpeg" alt="Soundararajan Francis">
+    <div class="about-text">
+      <h2>About The Author</h2>
+      <p>Soundararajan Francis is a spiritual care clinician, educator, speaker, mentor, and writer from Tamil Nadu, India.</p>
+      <p>His life journey includes village upbringing, structural spiritual ministry, teaching and motivational speaking, social initiatives, Clinical Pastoral Education (CPE), and chaplaincy formation in India and the United States.</p>
+      <br>
+      <h3>His work focuses on:</h3>
+      <ul class="themes-list">
+        <li><i class="fas fa-heart"></i> Spirituality & emotional growth</li>
+        <li><i class="fas fa-users"></i> Human connection & purpose-centered living</li>
+        <li><i class="fas fa-hand-holding-heart"></i> Compassion beyond divisions</li>
+      </ul>
+      <br>
+      <button class="cta-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Invite Francis to Speak</button>
+    </div>
+  </section>
+
+  <section class="beyond-boundaries reveal">
+    <div class="beyond-box">
+      <h2>Spirituality Beyond Boundaries</h2>
+      <div class="beyond-grid">
+        <div class="beyond-item"><h4>Humanity</h4></div>
+        <div class="beyond-item"><h4>Compassion</h4></div>
+        <div class="beyond-item"><h4>Lived Spirituality</h4></div>
+        <div class="beyond-item"><h4>Coexistence</h4></div>
+        <div class="beyond-item"><h4>Mutual Respect</h4></div>
+        <div class="beyond-item"><h4>Finding God through Love & Presence</h4></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="key-themes reveal">
+    <h2>What You Will Discover in This Book</h2>
+    <div class="themes-grid">
+      <div class="theme-card"><i class="fas fa-seedling"></i><p>Turning struggle into strength</p></div>
+      <div class="theme-card"><i class="fas fa-fingerprint"></i><p>Finding identity through life experience</p></div>
+      <div class="theme-card"><i class="fas fa-dove"></i><p>Spirituality beyond rituals</p></div>
+      <div class="theme-card"><i class="fas fa-link"></i><p>The power of relationships</p></div>
+      <div class="theme-card"><i class="fas fa-redo"></i><p>Courage to begin again</p></div>
+      <div class="theme-card"><i class="fas fa-chart-line"></i><p>Purpose through pain and growth</p></div>
+      <div class="theme-card"><i class="fas fa-globe"></i><p>Humanity beyond divisions</p></div>
+    </div>
+  </section>
+
+  <section class="timeline reveal" id="journey">
+    <h2>Journey Timeline</h2>
     <div class="timeline-grid">
-      <div class="card">
-        <h3>Village Life</h3>
-        <br>
-        <p>Humble beginnings that shaped values, compassion, and resilience.</p>
-      </div>
-      <div class="card">
-        <h3>Priesthood</h3>
-        <br>
-        <p>Dedicated years of spiritual service, mentoring, and guidance.</p>
-      </div>
-      <div class="card">
-        <h3>Global Mission</h3>
-        <br>
-        <p>Extending care, hope, and human connection across cultures.</p>
-      </div>
+      <div class="card"><h3>1984</h3><p>Born in Randham Korattur, Tamil Nadu. Humble beginnings that shaped values, compassion, and resilience.</p></div>
+      <div class="card"><h3>1999</h3><p>Joined formal guidance path. Dedicated years of deep reflection and foundational study.</p></div>
+      <div class="card"><h3>2012</h3><p>Ordained to legacy milestone. Initiated years of deep service, mentoring, and communal guidance.</p></div>
+      <div class="card"><h3>2014</h3><p>Marriage and new beginning. Shifting legacy paths towards unexpected core growth matrices.</p></div>
+      <div class="card"><h3>2015</h3><p>Started educational NGO. Expanding outreach parameters to elevate social transformations.</p></div>
+      <div class="card"><h3>2020</h3><p>Pandemic and life transition. Deep personal reflection and adaptation during global crises.</p></div>
+      <div class="card"><h3>2024</h3><p>Moved to USA for chaplaincy residency. Extending care, hope, and human connection across cultures.</p></div>
+      <div class="card"><h3>2026</h3><p>Published The Five Rupees Dreams. Structural launch framework shared live to inspire global dreamers.</p></div>
     </div>
   </section>
 
   <section class="gallery reveal" id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery-grid">
-      <img src="images/book-cover.jpeg" alt="Book Image 1">
-      <img src="images/publisher.jpeg" alt="Book Image 2">
-      <img src="images/author-family.jpeg" alt="Book Image 3">
+    <h2>My Journey in Pictures</h2>
+    <p style="margin-bottom: 30px;">A visual glimpse into village childhood, family operations, and global missions.</p>
+    
+    <div class="slider-wrapper">
+      <button class="slider-btn prev-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+      
+      <div class="slider-container" id="sliderContainer">
+        <div class="slide-card">
+          <div class="slide-img-box"><img src="images/author-father.jpeg" alt="Father"></div>
+          <div class="slide-info"><h4>Father & Granddaughter</h4><p>Humble pillars of guidance and foundational family legacy.</p></div>
+        </div>
+        <div class="slide-card">
+          <div class="slide-img-box"><img src="images/author-mother.jpeg" alt="Mother"></div>
+          <div class="slide-info"><h4>Loving Mother</h4><p>An epitome of unconditional love, resilience, and boundless prayers.</p></div>
+        </div>
+        <div class="slide-card">
+          <div class="slide-img-box"><img src="images/author-parents.jpeg" alt="Parents"></div>
+          <div class="slide-info"><h4>Beloved Parents</h4><p>Whose hard work and rich values turned challenges into dreams.</p></div>
+        </div>
+        <div class="slide-card">
+          <div class="slide-img-box"><img src="images/author-brother.jpeg" alt="Brother"></div>
+          <div class="slide-info"><h4>Brother & Family</h4><p>A beautiful family journey scaling heights together through deep bonding.</p></div>
+        </div>
+        <div class="slide-card">
+          <div class="slide-img-box"><img src="images/author-daughter.jpeg" alt="Daughter"></div>
+          <div class="slide-info"><h4>Little Daughter</h4><p>The joy and pure inspiration driving hope for a brighter tomorrow.</p></div>
+        </div>
+        <div class="slide-card">
+          <div class="slide-img-box"><img src="images/author-family.jpeg" alt="Family Portrait"></div>
+          <div class="slide-info"><h4>Beautiful Family</h4><p>Walking hand in hand through cross-cultural missions and milestones.</p></div>
+        </div>
+        <div class="slide-card">
+          <div class="slide-img-box"><img src="images/author-fam.jpeg" alt="Extended Family"></div>
+          <div class="slide-info"><h4>Extended Family Moments</h4><p>Shared joy, unity, and spiritual blessings during cultural visits.</p></div>
+        </div>
+        <div class="slide-card">
+          <div class="slide-img-box"><img src="images/author-fams.jpeg" alt="Complete Family"></div>
+          <div class="slide-info"><h4>Complete Family Gathering</h4><p>Rooted in togetherness, honoring traditions, and cheering milestones.</p></div>
+        </div>
+        <div class="slide-card">
+          <div class="slide-img-box"><img src="images/publisher.jpeg" alt="Publisher"></div>
+          <div class="slide-info"><h4>Publisher Milestone</h4><p>Jürgen John, bringing 'The Five Rupees Dreams' to readers globally.</p></div>
+        </div>
+        <div class="slide-card book-cover-slide">
+          <div class="slide-img-box"><img src="images/book-cover.jpeg" alt="Book Cover"></div>
+          <div class="slide-info"><h4>Official Book Cover</h4><p>Life Lessons from Poverty to Possibility—available across platforms.</p></div>
+        </div>
+      </div>
+
+      <button class="slider-btn next-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <section class="reader-reflection reveal">
+    <div class="reflection-box">
+      <h2>Reader Reflection</h2>
+      <p class="reflection-prompt">“What is your five rupees moment?”</p>
+      <p>We invite you to share your short personal reflection of resilience and breakthrough moments. Your story can inspire thousands of seekers.</p>
+      <br>
+      <a href="mailto:soundarfrancis@gmail.com?subject=My Five Rupees Moment Reflection" class="cta-btn"><i class="fas fa-pen-fancy"></i> Submit Your Reflection</a>
+    </div>
+  </section>
+
+  <section class="video-section reveal" id="video">
+    <h2>Watch & Listen</h2>
+    <p>Follow interviews, reflections, motivational talks, and book discussions.</p>
+    <div class="video-container-box">
+      <div class="video-placeholder">
+        <i class="fab fa-youtube"></i>
+        <p>Video Welcome Message & Reflections Coming Soon</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews-section reveal" id="reviews">
+    <div class="container" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
+      <h2>Public Reader Reviews</h2>
+      <p style="margin-bottom: 40px; text-align: center;">Have you read the book? Share your thoughts and ratings with the global community instantly.</p>
+      
+      <div class="reviews-split-layout" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; text-align: left;">
+        
+        <div class="review-form-box" style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--card-border); padding: 30px; border-radius: 16px; height: max-content; backdrop-filter: blur(10px);">
+          <h3 id="formTitleHeader" style="font-family: 'Playfair Display', serif; color: var(--gold); margin-bottom: 20px; font-size: 22px;">Write a Review</h3>
+          <form id="publicReviewForm" style="display: flex; flex-direction: column; gap: 16px;">
+            
+            <input type="hidden" id="editReviewId" value="">
+
+            <input type="text" id="revName" placeholder="Your Name" required style="width: 100%;">
+            
+            <div class="star-rating" style="display: flex; gap: 8px; font-size: 24px; color: #4b5563; cursor: pointer; align-items: center; user-select: none;">
+              <span style="font-size: 14px; color: var(--text-muted); margin-right: 5px;">Rating:</span>
+              <i class="fas fa-star star-node" data-value="1"></i>
+              <i class="fas fa-star star-node" data-value="2"></i>
+              <i class="fas fa-star star-node" data-value="3"></i>
+              <i class="fas fa-star star-node" data-value="4"></i>
+              <i class="fas fa-star star-node" data-value="5"></i>
+            </div>
+            
+            <textarea id="revMessage" placeholder="Type your book review publicly..." required style="width: 100%; height: 110px; resize: none;"></textarea>
+            <button type="submit" id="submitReviewBtn" class="cta-btn" style="border-radius: 8px; padding: 12px; width: 100%; font-weight: 600; box-shadow: none;">Publish Review</button>
+            <button type="button" id="cancelEditBtn" class="cta-btn secondary" style="border-radius: 8px; padding: 10px; width: 100%; font-weight: 600; box-shadow: none; display: none; margin-top: -8px;">Cancel Edit</button>
+          </form>
+        </div>
+
+        <div class="reviews-stream-outer">
+          <h3 style="font-family: 'Playfair Display', serif; color: var(--text-main); margin-bottom: 20px; font-size: 22px;">Recent Community Reviews</h3>
+          <div id="reviewsStreamContainer" style="display: flex; flex-direction: column; gap: 20px; max-height: 480px; overflow-y: auto; padding-right: 12px;">
+            </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
   <section class="testimonial reveal">
-    <h2>Message</h2>
     <div class="testimonial-box">
-      <p>“Dreams are not measured by where we start, but by the courage to continue beyond every limitation.”</p>
+      <p>“Life is not about having everything. It is about becoming everything you are meant to be.”</p>
     </div>
   </section>
 
   <section class="contact reveal" id="contact">
-    <h2>Contact</h2>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <div class="contact-info">
-      <p>📧 soundarfrancis@gmail.com</p>
-      <p>📞 +91 8825666271</p>
-      <p>📞 +1 (502) 768-7722</p>
+    <h2>Send a Private Message</h2>
+    <p style="margin-bottom: 40px;">Want to ask something confidentially or invite Soundararajan Francis for speaking panels directly? Fill out the secure form below to send an encrypted message directly to his email inbox.</p>
+    
+    <div class="contact-layouts-grid">
+      <form class="contact-form" action="https://formsubmit.co/soundarfrancis@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Private Message or Invitation details..." required></textarea>
+        <button type="submit" class="submit-btn">Send Private Message</button>
+      </form>
+      
+      <div class="contact-info-panel">
+        <div class="info-card">
+          <h3>Soundararajan Francis</h3>
+          <p>📧 soundarfrancis@gmail.com</p>
+          <p>📞 +91 8825666271</p>
+          <p>📞 +1 (502) 768-7722</p>
+        </div>
+        <div class="info-card secondary-contact">
+          <h3>Publishing & Media Contact</h3>
+          <p><strong>Jürgen John</strong></p>
+          <p>📧 juergenjohn01@myquix.de</p>
+          <p>📞 +49 170 8172378</p>
+        </div>
+      </div>
     </div>
   </section>
+<!-- Premium Glassmorphic Modal Architecture Overlay -->
+<div id="premiumAlertPopup" class="premium-modal-overlay">
+  <div class="premium-modal-box">
+    <div class="premium-modal-icon alert-icon">
+      <i class="fas fa-check-circle"></i>
+    </div>
+    <h3 id="premiumAlertTitle" class="premium-modal-title">Notification</h3>
+    <p id="premiumAlertMessage" class="premium-modal-message">Message details go here.</p>
+  </div>
+</div>
 
+<div id="premiumConfirmPopup" class="premium-modal-overlay">
+  <div class="premium-modal-box">
+    <div class="premium-modal-icon confirm-icon">
+      <i class="fas fa-trash-alt"></i>
+    </div>
+    <h3 id="premiumConfirmTitle" class="premium-modal-title">Confirm Action</h3>
+    <p id="premiumConfirmMessage" class="premium-modal-message">Are you sure?</p>
+    <div class="premium-modal-actions split-actions">
+      <button id="premiumConfirmCancelBtn" class="premium-btn btn-outline">Cancel</button>
+      <button id="premiumConfirmActionBtn" class="premium-btn btn-danger">Confirm</button>
+    </div>
+  </div>
+</div>
   <footer class="footer">
     <h2>THE FIVE RUPEES DREAMS</h2>
     <p class="footer-quote">“Where you begin is not where you are destined to stay.”</p>
@@ -134,15 +353,43 @@
     </div>
     <div class="footer-line"></div>
     <p class="copyright">© 2026 The Five Rupees Dreams. All Rights Reserved.</p>
+    <p class="footer-creation-note">Website created for readers, learners, seekers, and dreamers.</p>
   </footer>
 
   <div class="success-popup">
     <div class="success-box">
       <h3>Message Sent Successfully</h3>
-      <p>Thank you for reaching out. We will get back to you soon.</p>
+      <p>Thank you for reaching out. Your private message has been sent directly to the author's inbox.</p>
     </div>
   </div>
+<!-- Premium Glassmorphic Modal Architecture Overlay -->
+<div id="premiumAlertPopup" class="premium-modal-overlay">
+  <div class="premium-modal-box">
+    <div class="premium-modal-icon alert-icon">
+      <i class="fas fa-exclamation-circle"></i>
+    </div>
+    <h3 id="premiumAlertTitle" class="premium-modal-title">Notification</h3>
+    <p id="premiumAlertMessage" class="premium-modal-message">Message details go here.</p>
+    <div class="premium-modal-actions">
+      <button id="premiumAlertConfirmBtn" class="premium-btn btn-gold">Acknowledge</button>
+    </div>
+  </div>
+</div>
 
+<div id="premiumConfirmPopup" class="premium-modal-overlay">
+  <div class="premium-modal-box">
+    <div class="premium-modal-icon confirm-icon">
+      <i class="fas fa-trash-alt"></i>
+    </div>
+    <h3 id="premiumConfirmTitle" class="premium-modal-title">Confirm Action</h3>
+    <p id="premiumConfirmMessage" class="premium-modal-message">Are you absolutely sure you want to proceed?</p>
+    <div class="premium-modal-actions split-actions">
+      <button id="premiumConfirmCancelBtn" class="premium-btn btn-outline">Cancel</button>
+      <button id="premiumConfirmActionBtn" class="premium-btn btn-danger">Confirm</button>
+    </div>
+  </div>
+</div>
   <script src="script.js"></script>
+
 </body>
 </html>
